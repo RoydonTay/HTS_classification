@@ -36,7 +36,7 @@ st.markdown('# LLM HTS Prediction (Chp 61)')
 desc = st.text_input('Enter product decription: ')
 
 # load vector store
-@st.cache_resource
+@st.cache_data
 def load_vector_store():
     with open(r"chp61_hts_info_store", 'rb') as f:
         pkl = pickle.load(f)
